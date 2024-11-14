@@ -27,3 +27,41 @@ This project is a Python-based seat reservation system with a priority waitlist.
    ```bash
    python3 gatorTicketMaster.py <input_file>
    ```
+
+   
+   
+2. **Command Guide**:
+- Initialize(<seat_count>): Sets up the initial number of seats.
+- Reserve(<user_id>, <priority>): Attempts to reserve a seat for the user with the specified priority.
+- Cancel(<seat_id>, <user_id>): Cancels the reservation for the specified seat and user.
+- UpdatePriority(<user_id>, <new_priority>): Updates the waitlist priority for the specified user.
+- AddSeats(<count>): Adds more seats and assigns them to waitlisted users if available.
+- PrintReservations: Outputs the list of current reservations.
+- ReleaseSeats(<user_id_start>, <user_id_end>): Releases seats for users within the given ID range.
+- Quit: Terminates the program
+
+**Example**
+Input file (test1.txt):
+ ```bash
+Initialize(10)
+Reserve(2, 5)
+Reserve(6, 3)
+Reserve(13, 4)
+Cancel(3, 13)
+PrintReservations
+Quit
+ ```
+
+
+Expected Output (test1_output_file.txt):
+ ```bash
+10 Seats are made available for reservation
+User 2 reserved seat 1
+User 6 reserved seat 2
+User 13 reserved seat 3
+User 13 canceled their reservation
+Seat 1, User 2
+Seat 2, User 6
+Program Terminated!!
+
+ ```
