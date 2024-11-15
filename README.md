@@ -1,4 +1,4 @@
-# Seat Reservation System
+# Gator Ticket Master
 
 ## Overview
 This project is a Python-based seat reservation system with a priority waitlist. It allows users to reserve, cancel, and update their seat reservation priorities. If seats are unavailable, users are added to a waitlist, and seats are allocated based on priority when available.
