@@ -41,27 +41,30 @@ This project is a Python-based seat reservation system with a priority waitlist.
 - Quit: Terminates the program
 
 **Example**
-Input file (test1.txt):
+Input file (test5.txt):
  ```bash
-Initialize(10)
-Reserve(2, 5)
-Reserve(6, 3)
-Reserve(13, 4)
-Cancel(3, 13)
-PrintReservations
-Quit
+Initialize(5)
+Available()
+Reserve(1, 1)
+Reserve(2, 1)
+Cancel(1, 1)
+Reserve(3, 1)
+PrintReservations()
+Quit()
  ```
 
 
-Expected Output (test1_output_file.txt):
+Expected Output (test5_output_file.txt):
  ```bash
-10 Seats are made available for reservation
-User 2 reserved seat 1
-User 6 reserved seat 2
-User 13 reserved seat 3
-User 13 canceled their reservation
-Seat 1, User 2
-Seat 2, User 6
+5 Seats are made available for reservation
+Total Seats Available : 5, Waitlist : 0
+User 1 reserved seat 1
+User 2 reserved seat 2
+User 1 canceled their reservation
+User 3 reserved seat 1
+Seat 1, User 3
+Seat 2, User 2
 Program Terminated!!
+
 
  ```
